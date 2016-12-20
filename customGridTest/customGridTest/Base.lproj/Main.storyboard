@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mbb-FL-6Lx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NOTESONTHEWAY-->
+        <scene sceneID="jMz-E4-dHf">
+            <objects>
+                <collectionViewController id="oKU-6c-wv6" customClass="GridCollectionViewController" customModule="customGridTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="iut-1t-Bff">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewLayout key="collectionViewLayout" id="0sQ-X4-exC" customClass="CustomLayout" customModule="customGridTest" customModuleProvider="target"/>
+                        <imageView key="backgroundView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="torri-background-dark" id="7Tg-aZ-aRU">
+                            <rect key="frame" x="0.0" y="-64" width="375" height="667"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="testCell" id="P05-zw-2nE" customClass="GridCollectionViewCell" customModule="customGridTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eir-ei-Smb">
+                                            <rect key="frame" x="10" y="25" width="30" height="39.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="VJg-6w-uPp"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ltW-su-Sj2">
+                                            <rect key="frame" x="2" y="2" width="46" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="TSH-c6-ZQx"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" white="0.90909090909090906" alpha="0.89568345323741005" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ltW-su-Sj2" firstAttribute="top" secondItem="P05-zw-2nE" secondAttribute="top" constant="2" id="3Lb-mu-ELB"/>
+                                    <constraint firstItem="eir-ei-Smb" firstAttribute="leading" secondItem="P05-zw-2nE" secondAttribute="leadingMargin" constant="2" id="Cqi-9N-mge"/>
+                                    <constraint firstItem="eir-ei-Smb" firstAttribute="top" secondItem="ltW-su-Sj2" secondAttribute="bottom" constant="5" id="DmH-ld-4p6"/>
+                                    <constraint firstAttribute="trailing" secondItem="ltW-su-Sj2" secondAttribute="trailing" constant="2" id="Rdf-LR-ngX"/>
+                                    <constraint firstItem="ltW-su-Sj2" firstAttribute="leading" secondItem="P05-zw-2nE" secondAttribute="leading" constant="2" id="jBn-vj-nuT"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="eir-ei-Smb" secondAttribute="trailing" constant="2" id="vlo-9c-qVT"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageLabel" destination="eir-ei-Smb" id="U8V-JQ-p58"/>
+                                    <outlet property="imageView" destination="ltW-su-Sj2" id="VPd-Is-bKg"/>
+                                    <outlet property="imageViewHeightLayoutConstraint" destination="TSH-c6-ZQx" id="fUi-Vq-hLy"/>
+                                    <segue destination="ybq-nL-pAq" kind="show" identifier="detailsSegue" id="CwU-lL-6mt"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="oKU-6c-wv6" id="VuC-yQ-xFx"/>
+                            <outlet property="delegate" destination="oKU-6c-wv6" id="yfX-Io-F4g"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="NOTESONTHEWAY" id="X9S-Ha-fsS">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="eF1-qF-BdD"/>
+                        <barButtonItem key="rightBarButtonItem" title="About" id="UJ0-cq-WVe">
+                            <connections>
+                                <segue destination="2aH-Cs-B7d" kind="show" id="2aM-p1-dQZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="upC-Ir-Ata" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1111.2" y="118.29085457271366"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="2nj-7W-unw">
+            <objects>
+                <viewController id="2aH-Cs-B7d" customClass="AboutViewController" customModule="customGridTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oQC-yA-mc1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Le4-nm-QJY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FRF-Aw-Efd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="test" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MtI-YQ-jP3">
+                                <rect key="frame" x="20" y="84" width="335" height="563"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MtI-YQ-jP3" firstAttribute="top" secondItem="oQC-yA-mc1" secondAttribute="bottom" constant="20" id="BKe-Nj-l28"/>
+                            <constraint firstItem="Le4-nm-QJY" firstAttribute="top" secondItem="MtI-YQ-jP3" secondAttribute="bottom" constant="20" id="GQP-HX-scN"/>
+                            <constraint firstAttribute="trailing" secondItem="MtI-YQ-jP3" secondAttribute="trailing" constant="20" id="bbE-w3-EMw"/>
+                            <constraint firstItem="MtI-YQ-jP3" firstAttribute="leading" secondItem="FRF-Aw-Efd" secondAttribute="leading" constant="20" id="rlZ-y8-Hm1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aboutTextView" destination="MtI-YQ-jP3" id="h3R-Kt-f6O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TFc-d9-GC8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1832.8" y="-606.74662668665667"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="XgB-Cy-M9v">
+            <objects>
+                <viewController id="ybq-nL-pAq" customClass="DetailsViewController" customModule="customGridTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6bf-2u-RpF"/>
+                        <viewControllerLayoutGuide type="bottom" id="3mn-eu-DsR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="opB-Tz-D1F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bxb-wT-3SC">
+                                <rect key="frame" x="5" y="69" width="365" height="593"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bxb-wT-3SC" firstAttribute="leading" secondItem="opB-Tz-D1F" secondAttribute="leading" constant="5" id="3Xb-T9-vtj"/>
+                            <constraint firstItem="3mn-eu-DsR" firstAttribute="top" secondItem="Bxb-wT-3SC" secondAttribute="bottom" constant="5" id="G5w-Gr-exL"/>
+                            <constraint firstAttribute="trailing" secondItem="Bxb-wT-3SC" secondAttribute="trailing" constant="5" id="Kdh-3X-bt9"/>
+                            <constraint firstItem="Bxb-wT-3SC" firstAttribute="top" secondItem="6bf-2u-RpF" secondAttribute="bottom" constant="5" id="k4Q-cv-KGY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Bxb-wT-3SC" id="tuJ-O7-rBt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5GB-db-v0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1832.8" y="117.39130434782609"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wC6-cK-J5h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mbb-FL-6Lx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="elY-WO-cP0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oKU-6c-wv6" kind="relationship" relationship="rootViewController" id="22N-j8-tDm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVl-wE-fya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="346" y="118"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="torri-background-dark" width="1000" height="667"/>
+    </resources>
+</document>
