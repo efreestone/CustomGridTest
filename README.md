@@ -1,2 +1,4 @@
 # CustomGridTest
-Experiment with dynamically sized collection view cells
+Custom Grid Test is both an experiment with dynamic collection view cells loosely based on the tutorial at https://www.raywenderlich.com/107439/uicollectionview-custom-layout-tutorial-pinterest , and a demo for a potential app for a friends business. 
+
+All poetry and images by Torri Horness/notesontheway.com
