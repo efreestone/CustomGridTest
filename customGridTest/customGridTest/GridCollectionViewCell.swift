@@ -21,7 +21,7 @@ class GridCollectionViewCell: UICollectionViewCell {
         
         if let attributes = layoutAttributes as? CustomLayoutAttributes {
             imageViewHeightLayoutConstraint.constant = attributes.imageHeight
-//            labelHeightLayoutConstraint.constant = attributes.annotationHeight
+            labelHeightLayoutConstraint.constant = attributes.titleHeight
         }
     }
 }

@@ -33,7 +33,6 @@ class Image {
     
     convenience init(dictionary: NSDictionary) {
         let title = dictionary["Caption"] as? String
-        //let comment = dictionary["Comment"] as? String
         let photo = dictionary["Photo"] as? String
         let image = UIImage(named: photo!)?.decompressedImage
         self.init(title: title!, image: image!) //comment: comment!,
@@ -41,6 +40,7 @@ class Image {
     
     func heightForComment(_ font: UIFont, width: CGFloat) -> CGFloat {
         let rect = NSString(string: title).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        //print("heightForComment width = \(width)")
         return ceil(rect.height)
     }
     

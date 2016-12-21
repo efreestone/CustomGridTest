@@ -50,6 +50,7 @@ extension GridCollectionViewController {
         
         cell.imageView.image = cellImage
         cell.imageLabel.text = labelText
+//        print("cell label width = \(cell.imageLabel.frame.width)")
 //        cell.imageLabel.backgroundColor = UIColor.lightGray
         return cell
     }
@@ -75,17 +76,16 @@ extension GridCollectionViewController: CustomLayoutDelegate {
         let imageObject = imagesDictionary[indexPath.row]
         let boundingRect = CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
         let imageRect = AVMakeRect(aspectRatio: imageObject.image.size, insideRect: boundingRect)
-        
         return imageRect.size.height
     }
     
     //Get height for title
     func collectionView(collectionView: UICollectionView, heightForTitleAtIndexPath indexPath: IndexPath, withWidth width: CGFloat) -> CGFloat {
-        let titlePadding = CGFloat(10)
+        let titlePadding = CGFloat(4)
         let imageObject = imagesDictionary[indexPath.row]
-        let font = UIFont(name: "American Typewriter", size: 18)
-        let commentHeight = imageObject.heightForComment(font!, width: width)
-        let heightOfTitle = titlePadding + commentHeight //+ annotationPadding
+        let font = UIFont(name: "American Typewriter", size: 17)
+        let commentHeight = imageObject.heightForComment(font!, width: width - titlePadding)
+        let heightOfTitle = titlePadding + commentHeight + titlePadding
         return heightOfTitle
     }
 }

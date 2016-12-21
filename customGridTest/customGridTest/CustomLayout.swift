@@ -24,7 +24,7 @@ class CustomLayoutAttributes: UICollectionViewLayoutAttributes {
     override func copy(with zone: NSZone? = nil) -> Any {
         let copy = super.copy(with: zone) as! CustomLayoutAttributes
         copy.imageHeight = imageHeight
-//        copy.titleHeight = titleHeight
+        copy.titleHeight = titleHeight
         return copy
     }
     
@@ -45,7 +45,7 @@ class CustomLayout: UICollectionViewLayout {
     var delegate: CustomLayoutDelegate!
     
     //Set columns and cell padding
-    var numberOfColumns = 2
+    var numberOfColumns = 3
     var cellPadding: CGFloat = 7.0
     
     //Cache ALL cell attributes w/ custom layout
@@ -54,6 +54,7 @@ class CustomLayout: UICollectionViewLayout {
     //Declare content height and width, calculated based on collection view width and insets
     fileprivate var contentHeight: CGFloat = 0.0
     fileprivate var contentWidth: CGFloat { let insets = collectionView!.contentInset
+//        print("content width = \(collectionView!.bounds.width)")
         return collectionView!.bounds.width - (insets.left + insets.right)
     }
     
