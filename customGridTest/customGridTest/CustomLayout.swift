@@ -13,6 +13,8 @@ protocol CustomLayoutDelegate {
     func collectionView(collectionView: UICollectionView, heightForImageAtIndexPath indexPath: IndexPath, withWidth width: CGFloat) -> CGFloat
     //Get height of title for cell
     func collectionView(collectionView: UICollectionView, heightForTitleAtIndexPath indexPath: IndexPath, withWidth width: CGFloat) -> CGFloat
+    //Set number of columns
+    func setNumberOfColumns() -> Int
 }
 
 class CustomLayoutAttributes: UICollectionViewLayoutAttributes {
@@ -41,11 +43,19 @@ class CustomLayoutAttributes: UICollectionViewLayoutAttributes {
 }
 
 class CustomLayout: UICollectionViewLayout {
+    
+    //Override invalidate to clear cache and recalc attributes, used for resizing on screen rotation
+    override func invalidateLayout() {
+        self.cache.removeAll()
+        super.invalidateLayout()
+        print("Custom Layout INVALIDATED")
+    }
+    
     //Set delegate
     var delegate: CustomLayoutDelegate!
     
     //Set columns and cell padding
-    var numberOfColumns = 3
+    //var numberOfColumns = 2
     var cellPadding: CGFloat = 7.0
     
     //Cache ALL cell attributes w/ custom layout
@@ -65,6 +75,7 @@ class CustomLayout: UICollectionViewLayout {
     
     //Override prepare method for layout
     override func prepare() {
+        let numberOfColumns = delegate.setNumberOfColumns()
         //Calculate layout attributes if cache is empty
         if cache.isEmpty {
             //Calculate and fill x and y offset arrays

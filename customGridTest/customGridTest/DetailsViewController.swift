@@ -17,7 +17,7 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("Image name on details = \(detailsImageObject.title)")
+//        print("Image name on details = \(detailsImageObject.title)")
         
         imageView.image = detailsImageObject.image
         

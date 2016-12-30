@@ -70,6 +70,12 @@
 	</dict>
 	<dict>
 		<key>Photo</key>
+		<string>Just Imagine</string>
+		<key>Caption</key>
+		<string>Just Imagine</string>
+	</dict>
+	<dict>
+		<key>Photo</key>
 		<string>Lanterns cover</string>
 		<key>Caption</key>
 		<string>Lanterns cover</string>

@@ -15,6 +15,7 @@ var imagesDictionary = Image.getAllImages()
 class GridCollectionViewController: UICollectionViewController {
     fileprivate let reuseIdentifier = "testCell"
     fileprivate var itemSelected: Image = imagesDictionary[0]
+    fileprivate var numberOfColumns = UIApplication.shared.statusBarOrientation.isLandscape ? 3 : 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,13 @@ class GridCollectionViewController: UICollectionViewController {
         if let layout = collectionView?.collectionViewLayout as? CustomLayout {
             layout.delegate = self
         }
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        print("viewWillTransition")
+        //Set number of columns based on orientation
+        numberOfColumns = UIDevice.current.orientation.isLandscape ? 3 : 2
+        self.collectionViewLayout.invalidateLayout()
     }
 }
 
@@ -87,6 +95,11 @@ extension GridCollectionViewController: CustomLayoutDelegate {
         let commentHeight = imageObject.heightForComment(font!, width: width - titlePadding)
         let heightOfTitle = titlePadding + commentHeight + titlePadding
         return heightOfTitle
+    }
+    
+    //Set number of columns based on orientation
+    func setNumberOfColumns() -> Int {
+        return numberOfColumns
     }
 }
 
