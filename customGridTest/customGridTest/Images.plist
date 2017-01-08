@@ -6,7 +6,7 @@
 		<key>Photo</key>
 		<string>A Tomorrow more fit for love</string>
 		<key>Caption</key>
-		<string>A Tomorrow more fit for love with a longer title to test wrapping of lines. Keep going and going and going 115 char</string>
+		<string>A Tomorrow more fit for love</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
@@ -16,9 +16,9 @@
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>A whisper is enough</string>
+		<string>At the Breaking</string>
 		<key>Caption</key>
-		<string>A whisper is enough</string>
+		<string>At the Breaking</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
@@ -28,63 +28,57 @@
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>Don&apos;t give up</string>
+		<string>Do Good</string>
 		<key>Caption</key>
-		<string>Don&apos;t give up</string>
+		<string>Do Good</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>Doodle Bubble Designs</string>
+		<string>Don&apos;t Give Up</string>
 		<key>Caption</key>
-		<string>Doodle Bubble Designs</string>
+		<string>Don&apos;t Give Up</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>Gather</string>
+		<string>Find Something</string>
 		<key>Caption</key>
-		<string>Gather</string>
+		<string>Find Something</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>Getting lost</string>
+		<string>Flicker</string>
 		<key>Caption</key>
-		<string>Getting lost</string>
+		<string>Flicker</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>Giving Heals</string>
+		<string>Holy Ground</string>
 		<key>Caption</key>
-		<string>Giving Heals</string>
+		<string>Holy Ground</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>Have to Believe</string>
+		<string>I Adventure</string>
 		<key>Caption</key>
-		<string>Have to Believe</string>
+		<string>I Adventure</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>I want real</string>
+		<string>I Have a Choice</string>
 		<key>Caption</key>
-		<string>I want real</string>
+		<string>I Have a Choice</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>Just Imagine</string>
+		<string>Laugh &amp; Cry</string>
 		<key>Caption</key>
-		<string>Just Imagine</string>
+		<string>Laugh &amp; Cry</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>Lanterns cover</string>
+		<string>Let It Grow</string>
 		<key>Caption</key>
-		<string>Lanterns cover</string>
-	</dict>
-	<dict>
-		<key>Photo</key>
-		<string>Look around you</string>
-		<key>Caption</key>
-		<string>Look around you</string>
+		<string>Let It Grow</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
@@ -94,63 +88,69 @@
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>Peace - Torri and Alex</string>
+		<string>Me that is Me</string>
 		<key>Caption</key>
-		<string>Peace - Torri and Alex</string>
+		<string>Me that is Me</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>So tired</string>
+		<string>Mountains</string>
 		<key>Caption</key>
-		<string>So tired</string>
+		<string>Mountains</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>Spirit of the Sea</string>
+		<string>Paper Airplane</string>
 		<key>Caption</key>
-		<string>Spirit of the Sea</string>
+		<string>Paper Airplane</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>Spirit Shines Through</string>
+		<string>Speak</string>
 		<key>Caption</key>
-		<string>Spirit Shines Through</string>
+		<string>Speak</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>That You Are Found</string>
+		<string>Spirit of Laughter</string>
 		<key>Caption</key>
-		<string>That You Are Found</string>
+		<string>Spirit of Laughter</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>The next</string>
+		<string>The Brilliance</string>
 		<key>Caption</key>
-		<string>The next</string>
+		<string>The Brilliance</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>The Sound</string>
+		<string>Tower</string>
 		<key>Caption</key>
-		<string>The Sound</string>
+		<string>Tower</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>We Breathe</string>
+		<string>Whisper</string>
 		<key>Caption</key>
-		<string>We Breathe</string>
+		<string>Whisper</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>When Injustice Comes</string>
+		<string>Women</string>
 		<key>Caption</key>
-		<string>When Injustice Comes</string>
+		<string>Women</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
-		<string>Your Soul Looks Good In This Light</string>
+		<string>Yes</string>
 		<key>Caption</key>
-		<string>Your Soul Looks Good In This Light</string>
+		<string>Yes</string>
+	</dict>
+	<dict>
+		<key>Photo</key>
+		<string>You Taught Me to Dream</string>
+		<key>Caption</key>
+		<string>You Taught Me to Dream</string>
 	</dict>
 </array>
 </plist>
