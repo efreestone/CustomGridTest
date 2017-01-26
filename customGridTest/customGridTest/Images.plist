@@ -16,6 +16,12 @@
 	</dict>
 	<dict>
 		<key>Photo</key>
+		<string>Anything</string>
+		<key>Caption</key>
+		<string>Anything</string>
+	</dict>
+	<dict>
+		<key>Photo</key>
 		<string>At the Breaking</string>
 		<key>Caption</key>
 		<string>At the Breaking</string>
