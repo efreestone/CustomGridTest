@@ -57,7 +57,7 @@ extension GridCollectionViewController {
         print("Char count = \(labelText.characters.count)")
         
         cell.imageView.image = cellImage
-        cell.imageLabel.text = labelText
+        cell.imageLabel.text = labelText //"\(indexPath.row) " +
 //        print("cell label width = \(cell.imageLabel.frame.width)")
 //        cell.imageLabel.backgroundColor = UIColor.lightGray
         return cell
