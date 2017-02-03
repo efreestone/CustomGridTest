@@ -111,8 +111,9 @@ class CustomLayout: UICollectionViewLayout {
                 cache.append(attributes)
                 
                 //Expand content height to account for newly calculated item, advance yOffset & column
+                //This is now zeroed in invalidateLayout to avoid bug where extra space is added when switching from portrait
                 contentHeight = max(contentHeight, frame.maxY)
-                print("Content height in prepare = \(contentHeight)")
+//                print("Content height in prepare = \(contentHeight)")
                 yOffset[column] = yOffset[column] + height
                 column = column >= (numberOfColumns - 1) ? 0 : column + 1
             }
