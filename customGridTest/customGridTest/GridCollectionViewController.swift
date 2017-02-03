@@ -54,7 +54,7 @@ extension GridCollectionViewController {
 //        print("Cell image height = \(cell.imageView.frame.height)")
 //        print("Cell height = \(cell.frame.height)")
         let labelText = imagesDictionary[indexPath.row].title
-        print("Char count = \(labelText.characters.count)")
+        //print("Char count = \(labelText.characters.count)")
         
         cell.imageView.image = cellImage
         cell.imageLabel.text = labelText //"\(indexPath.row) " +

@@ -47,6 +47,8 @@ class CustomLayout: UICollectionViewLayout {
     //Override invalidate to clear cache and recalc attributes, used for resizing on screen rotation
     override func invalidateLayout() {
         self.cache.removeAll()
+        print("Content height in invalidateLayout = \(contentHeight)")
+        contentHeight = 0.0
         super.invalidateLayout()
         print("Custom Layout INVALIDATED")
     }
@@ -110,6 +112,7 @@ class CustomLayout: UICollectionViewLayout {
                 
                 //Expand content height to account for newly calculated item, advance yOffset & column
                 contentHeight = max(contentHeight, frame.maxY)
+                print("Content height in prepare = \(contentHeight)")
                 yOffset[column] = yOffset[column] + height
                 column = column >= (numberOfColumns - 1) ? 0 : column + 1
             }
