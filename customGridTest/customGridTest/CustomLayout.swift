@@ -43,16 +43,6 @@ class CustomLayoutAttributes: UICollectionViewLayoutAttributes {
 }
 
 class CustomLayout: UICollectionViewLayout {
-    
-    //Override invalidate to clear cache and recalc attributes, used for resizing on screen rotation
-    override func invalidateLayout() {
-        self.cache.removeAll()
-        print("Content height in invalidateLayout = \(contentHeight)")
-        contentHeight = 0.0
-        super.invalidateLayout()
-        print("Custom Layout INVALIDATED")
-    }
-    
     //Set delegate
     var delegate: CustomLayoutDelegate!
     
@@ -68,6 +58,15 @@ class CustomLayout: UICollectionViewLayout {
     fileprivate var contentWidth: CGFloat { let insets = collectionView!.contentInset
 //        print("content width = \(collectionView!.bounds.width)")
         return collectionView!.bounds.width - (insets.left + insets.right)
+    }
+    
+    //Override invalidate to clear cache and recalc attributes, used for resizing on screen rotation
+    override func invalidateLayout() {
+        self.cache.removeAll()
+        print("Content height in invalidateLayout = \(contentHeight)")
+        contentHeight = 0.0
+        super.invalidateLayout()
+        print("Custom Layout INVALIDATED")
     }
     
     //Override and set custom attributes
