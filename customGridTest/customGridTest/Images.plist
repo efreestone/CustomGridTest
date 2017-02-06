@@ -34,6 +34,12 @@
 	</dict>
 	<dict>
 		<key>Photo</key>
+		<string>But Now, Dear Heart</string>
+		<key>Caption</key>
+		<string>But Now, Dear Heart</string>
+	</dict>
+	<dict>
+		<key>Photo</key>
 		<string>Do Good</string>
 		<key>Caption</key>
 		<string>Do Good</string>
@@ -73,6 +79,12 @@
 		<string>I Have a Choice</string>
 		<key>Caption</key>
 		<string>I Have a Choice</string>
+	</dict>
+	<dict>
+		<key>Photo</key>
+		<string>If His Burden is Light</string>
+		<key>Caption</key>
+		<string>If His Burden is Light</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
@@ -121,6 +133,12 @@
 		<string>Spirit of Laughter</string>
 		<key>Caption</key>
 		<string>Spirit of Laughter</string>
+	</dict>
+	<dict>
+		<key>Photo</key>
+		<string>Stitches</string>
+		<key>Caption</key>
+		<string>Stitches</string>
 	</dict>
 	<dict>
 		<key>Photo</key>
