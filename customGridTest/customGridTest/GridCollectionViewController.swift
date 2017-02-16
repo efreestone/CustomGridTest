@@ -89,7 +89,7 @@ extension GridCollectionViewController: CustomLayoutDelegate {
     
     //Get height for title
     func collectionView(collectionView: UICollectionView, heightForTitleAtIndexPath indexPath: IndexPath, withWidth width: CGFloat) -> CGFloat {
-        let titlePadding = CGFloat(5)
+        let titlePadding = CGFloat(3)
         let imageObject = imagesDictionary[indexPath.row]
         let font = UIFont(name: "American Typewriter", size: 17)
         let commentHeight = imageObject.heightForComment(font!, width: width - titlePadding)
