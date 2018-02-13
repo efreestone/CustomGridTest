@@ -42,7 +42,7 @@ class Image {
     
     //Calculate height of the title label based on text and font, currently size 17 American Typewriter
     func heightForComment(_ font: UIFont, width: CGFloat) -> CGFloat {
-        let rect = NSString(string: title).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        let rect = NSString(string: title).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
         //print("heightForComment width = \(width)")
         return ceil(rect.height)
     }

@@ -20,7 +20,7 @@ class GridCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Set title font
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "American Typewriter", size: 17)!]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "American Typewriter", size: 17)!]
         
         //Set delegate if CustomLayout is current layout
         if let layout = collectionView?.collectionViewLayout as? CustomLayout {
